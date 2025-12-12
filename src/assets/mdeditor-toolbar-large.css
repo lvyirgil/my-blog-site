@@ -1,0 +1,44 @@
+/* 气泡提示样式 */
+.w-md-editor-toolbar button[aria-label] {
+  position: relative;
+}
+.w-md-editor-toolbar button[aria-label]:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: 50%;
+  top: -38px;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 1.2em;
+  font-size: 1rem;
+  white-space: nowrap;
+  z-index: 99;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.18);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+.w-md-editor-toolbar button[aria-label]:not(:hover)::after {
+  opacity: 0;
+  pointer-events: none;
+}
+/* 优化 MDEditor 工具栏按钮样式为圆角、悬浮高亮、适中尺寸 */
+.w-md-editor-toolbar button {
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 0.75rem !important;
+  background: #f3f4f6 !important;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: none !important;
+  margin: 0 2px;
+}
+.w-md-editor-toolbar button:hover, .w-md-editor-toolbar button:focus {
+  background: #e0e7ef !important;
+  box-shadow: 0 2px 8px 0 rgba(60,60,60,0.08) !important;
+}
+.w-md-editor-toolbar svg {
+  width: 22px !important;
+  height: 22px !important;
+}
