@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/my-blog-site/', // 关键：为 GitHub Pages 设置正确的资源路径前缀
   plugins: [react()],
   resolve: {
     alias: {
